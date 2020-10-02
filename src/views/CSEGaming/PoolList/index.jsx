@@ -42,60 +42,58 @@ class PoolListComponent extends React.Component {
       //main component
       return (
          <Modal isOpen={isOpen} toggle={toggle} size="xl">
-            <div className="modal-body ">
-               <Row>
-                  <Col md="12">
-                     <Card>
-                        <CardHeader>
-                           <CardTitle tag="h4" className="mt-0">
-                              How to register pool?
-                           </CardTitle>
-                        </CardHeader>
-                        <CardBody>
-                           <p>Step 1. Create telegram group</p>
+            <Row>
+               <Col md="12">
+                  <Card>
+                     <CardHeader>
+                        <CardTitle tag="h4" className="mt-0">
+                           How to register pool?
+                        </CardTitle>
+                     </CardHeader>
+                     <CardBody>
+                        <p>Step 1. Create telegram group</p>
 
-                           <p>
-                              Step 2. Add game bot into group: <b>@cse_miner_game_bot</b>
-                           </p>
+                        <p>
+                           Step 2. Add game bot into group: <b>@cse_miner_game_bot</b>
+                        </p>
 
-                           <p>Step 3. Member of group may press play button to join the game</p>
+                        <p>Step 3. Member of group may press play button to join the game</p>
 
-                           <p>Step 4. Continue to press play button on chatbot box</p>
+                        <p>Step 4. Continue to press play button on chatbot box</p>
 
-                           <p>Step 5. Read Terms and Agreement and begin to Play</p>
-                        </CardBody>
-                     </Card>
-                  </Col>
-                  <Col>
-                     <Card>
-                        <CardHeader>
-                           <CardTitle tag="h4" className="mt-0">
-                              Pool list
-                           </CardTitle>
-                        </CardHeader>
-                        <CardBody>
-                           <Table responsive striped>
-                              <thead className="text-primary">
-                                 <tr>
-                                    <th className="text-center">#</th>
-                                    <th className="text-center">Name</th>
-                                    <th>Owner</th>
-                                    <th>Score</th>
-                                    <th>Members</th>
-                                 </tr>
-                              </thead>
-                              <tbody>{listItems}</tbody>
-                           </Table>
-                        </CardBody>
-                     </Card>
-                  </Col>
-                  <Col md="12">
-                     <Button className="btn-round float-right  mr-2" color="danger" data-dismiss="modal" type="button" onClick={toggle}>
-                        Closed
-                     </Button>
-                  </Col>
-               </Row>
-            </div>
+                        <p>Step 5. Read Terms and Agreement and begin to Play</p>
+                     </CardBody>
+                  </Card>
+               </Col>
+               <Col>
+                  <Card>
+                     <CardHeader>
+                        <CardTitle tag="h4" className="mt-0">
+                           Pool list
+                        </CardTitle>
+                     </CardHeader>
+                     <CardBody>
+                        <Table responsive striped>
+                           <thead className="text-primary">
+                              <tr>
+                                 <th className="text-center">#</th>
+                                 <th className="text-center">Name</th>
+                                 <th>Owner</th>
+                                 <th>Score</th>
+                                 <th>Members</th>
+                              </tr>
+                           </thead>
+                           <tbody>{listItems}</tbody>
+                        </Table>
+                     </CardBody>
+                  </Card>
+               </Col>
+               <Col md="12">
+                  <Button className="btn-round float-right  mr-2" color="danger" data-dismiss="modal" type="button" onClick={toggle}>
+                     Closed
+                  </Button>
+               </Col>
+            </Row>
          </Modal>
       );
    }

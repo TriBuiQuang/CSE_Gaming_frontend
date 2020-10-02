@@ -1,19 +1,6 @@
 /*!
-
-=========================================================
-* Paper Dashboard PRO React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
+ * Coded by Tri Bui Quang Copyright 2020
+ */
 import React from "react";
 import classnames from "classnames";
 import { NavLink } from "react-router-dom";
@@ -26,8 +13,16 @@ import ModalProfile from "views/CSEGaming/Profile";
 import ModalTransferHistory from "views/CSEGaming/TransferHistory";
 import ModalTutorial from "views/CSEGaming/Tutorial";
 import ModalDeposit from "views/CSEGaming/Tutorial/Component/modal";
+import ModalDepositNoti from "views/CSEGaming/Modal/DepositNotiModal";
+import BuyNotiModal from "views/CSEGaming/Modal/BuyNotiModal";
+import DiamondModal from "views/CSEGaming/Modal/DiamondModal";
+import AlertModal from "views/CSEGaming/Modal/AlertModal";
+import LoginAccModal from "views/CSEGaming/Modal/LoginAccModal";
+import LoginModal from "views/CSEGaming/Modal/LoginModal";
+import ErrorModal from "views/CSEGaming/Modal/ErrorModal";
 
 class AuthNavbar extends React.Component {
+   //#region constructor
    constructor(props) {
       super(props);
       this.state = {
@@ -37,10 +32,18 @@ class AuthNavbar extends React.Component {
          modalProfile: false,
          modalPoolList: false,
          modalTransferHistory: false,
-         modalTutorial: false,
+         modalTutorial: true,
          modalDeposit: false,
+         modalDepositNoti: false,
+         modalBuyNoti: false,
+         modalDiamond: false,
+         modalAlert: false,
+         modalLoginAcc: false,
+         modalLogin: false,
+         modalError: false,
       };
    }
+
    componentDidMount() {
       window.addEventListener("resize", this.updateColor);
    }
@@ -58,8 +61,10 @@ class AuthNavbar extends React.Component {
       }
       this.setState(newState);
    };
+   //#endregion
 
    //customize
+   //#region toogle
    toggleModalDashboard = () => {
       this.setState({
          modalDashboard: !this.state.modalDashboard,
@@ -91,6 +96,42 @@ class AuthNavbar extends React.Component {
       });
       if (this.state.modalTutorial === true) this.toggleModalTutorial();
    };
+   toggleDepositNoti = () => {
+      this.setState({
+         modalDepositNoti: !this.state.modalDepositNoti,
+      });
+   };
+   toggleBuyNoti = () => {
+      this.setState({
+         modalBuyNoti: !this.state.modalBuyNoti,
+      });
+   };
+   toggleDiamond = () => {
+      this.setState({
+         modalDiamond: !this.state.modalDiamond,
+      });
+   };
+   toggleAlert = () => {
+      this.setState({
+         modalAlert: !this.state.modalAlert,
+      });
+   };
+   toggleLoginAcc = () => {
+      this.setState({
+         modalLoginAcc: !this.state.modalLoginAcc,
+      });
+   };
+   toggleLogin = () => {
+      this.setState({
+         modalLogin: !this.state.modalLogin,
+      });
+   };
+   toggleError = () => {
+      this.setState({
+         modalError: !this.state.modalError,
+      });
+   };
+   //#endregion
 
    render() {
       return (
@@ -154,6 +195,13 @@ class AuthNavbar extends React.Component {
             <ModalTransferHistory isOpen={this.state.modalTransferHistory} toggle={this.toggleModalTransferHistory} />
             <ModalTutorial isOpen={this.state.modalTutorial} toggle={this.toggleModalTutorial} toggleDeposit={this.toggleDeposit} />
             <ModalDeposit isOpen={this.state.modalDeposit} toggle={this.toggleDeposit} />
+            <ModalDepositNoti isOpen={this.state.modalDepositNoti} toggle={this.toggleDepositNoti} toggleDeposit={this.toggleDeposit} />
+            <BuyNotiModal isOpen={this.state.modalBuyNoti} toggle={this.toggleBuyNoti} />
+            <DiamondModal isOpen={this.state.modalDiamond} toggle={this.toggleDiamond} />
+            <AlertModal isOpen={this.state.modalAlert} toggle={this.toggleAlert} />
+            <LoginAccModal isOpen={this.state.modalLoginAcc} toggle={this.toggleLoginAcc} />
+            <LoginModal isOpen={this.state.modalLogin} toggle={this.toggleLogin} />
+            <ErrorModal isOpen={this.state.modalError} toggle={this.toggleError} />
          </>
       );
    }
