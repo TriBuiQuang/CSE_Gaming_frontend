@@ -89,6 +89,7 @@ class AuthNavbar extends React.Component {
       this.setState({
          modalTutorial: !this.state.modalTutorial,
       });
+      if (this.state.modalDiamond === false) this.toggleDiamond();
    };
    toggleDeposit = () => {
       this.setState({
@@ -96,6 +97,7 @@ class AuthNavbar extends React.Component {
       });
       if (this.state.modalTutorial === true) this.toggleModalTutorial();
    };
+
    toggleDepositNoti = () => {
       this.setState({
          modalDepositNoti: !this.state.modalDepositNoti,
