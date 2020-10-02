@@ -1,0 +1,60 @@
+.fp-scrollable {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   // &:first-child {
+   //    // align-items: normal;
+   // }
+}
+.fullpage-scroll {
+   .modal-body {
+      border-radius: 10px;
+      padding: 0 0 20px 0;
+   }
+   .section:not(:first-child) {
+      padding: 0 0;
+   }
+   h4,
+   p {
+      text-align: center;
+      padding-left: 3em;
+      padding-right: 3em;
+   }
+   p {
+      text-align: initial;
+   }
+   img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   @media only screen and (max-width: 600px) {
+      h4,
+      p {
+         padding-left: 1em;
+         padding-right: 3em;
+      }
+   }
+}
+.fp-right ul li span {
+   background: white !important;
+}
+.fp-slidesNav.fp-bottom ul {
+   text-align: center;
+   li span {
+      background: white !important;
+   }
+}
+
+.full-page {
+   padding: 0 0 120px;
+}
+
+// navbar
+@media screen and (max-width: 991px) {
+   .login-page .navbar.bg-white .navbar-collapse .navbar-nav .nav-item .nav-link {
+      text-align: center;
+      font-weight: 400;
+   }
+}

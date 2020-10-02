@@ -1,0 +1,175 @@
+@import "color";
+
+.CSEGaming-Dashboard .row {
+   .nav-tabs {
+      .nav-item {
+         .nav-link {
+            cursor: pointer;
+            background: $base-color;
+            border: 1px solid black;
+         }
+         .nav-link.active {
+            background: $sky-color;
+            color: $base-color;
+            font-weight: bold;
+         }
+         .nav-link.active:before {
+            border: none;
+         }
+         .nav-link.active:after {
+            border: none;
+         }
+      }
+      .form-group {
+         margin-bottom: -2px;
+         margin-left: auto;
+         .form-control {
+            background-color: $base-color;
+            border: 1px solid $sky-color;
+         }
+         @media only screen and (max-width: 407px) {
+            .form-control {
+               display: none;
+            }
+         }
+
+         .rdt.rdtOpen .rdtPicker {
+            right: 0;
+            table {
+               border-color: $sky-color !important;
+               background-color: #0c1826;
+               color: $card-text-color;
+               tr td:hover,
+               thead tr th:hover {
+                  background-color: $sky-color;
+                  color: $base-color;
+                  font-weight: bolder;
+               }
+            }
+         }
+      }
+   }
+   .form-group {
+      .form-control {
+         background-color: $base-color;
+         border: 1px solid $sky-color;
+      }
+      .rdt.rdtOpen .rdtPicker {
+         right: 0;
+         table {
+            border-color: $sky-color !important;
+            background-color: #0c1826;
+            color: $card-text-color;
+            tr td:hover,
+            thead tr th:hover {
+               background-color: $sky-color;
+               color: $base-color;
+               font-weight: bolder;
+            }
+         }
+      }
+   }
+   .hide {
+      @media only screen and (min-width: 407px) {
+         display: none;
+      }
+   }
+}
+
+.CSEGaming-tutorial {
+   img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   @media only screen and (min-width: 992px) {
+      #step1,
+      #step1_2,
+      #step2 {
+         width: 50%;
+      }
+      #step3,
+      #step4 {
+         width: 30%;
+      }
+   }
+   #step1_3 {
+      display: initial;
+   }
+}
+.card .card-header:not([data-background-color]) {
+   background-color: $sky-color;
+}
+//form
+.form-control-lg {
+   border-radius: 10px;
+}
+.form-group .form-control + .input-group-prepend .input-group-text,
+.form-group .form-control + .input-group-append .input-group-text,
+.input-group .form-control + .input-group-prepend .input-group-text,
+.input-group .form-control + .input-group-append .input-group-text,
+.button_responsive input {
+   padding: 10px 10px 10px 10px;
+}
+.form-group .form-control + .input-group-prepend .input-group-text,
+.form-group .form-control + .input-group-append .input-group-text,
+.input-group .form-control + .input-group-prepend .input-group-text,
+.input-group .form-control + .input-group-append .input-group-text,
+.button_responsive button {
+   color: $sky-color;
+   border-color: $sky-color;
+   border: 2px solid;
+   background-color: $base-color;
+   font-weight: 600;
+   &:hover {
+      cursor: pointer;
+      background-color: $sky-color;
+      color: $base-color;
+      border: 2px solid;
+      font-weight: 600;
+      border-color: $sky-color;
+   }
+}
+.form-control {
+   border-color: $sky-color;
+}
+//modal
+.login-page .modal-dialog {
+   padding-top: 0;
+   .table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.5);
+   }
+   .table-responsive {
+      overflow: initial;
+   }
+}
+.modal-body {
+   border-radius: 10px;
+   padding: 0 0 20px 0;
+}
+.section:not(:first-child) {
+   padding: 0 0;
+}
+@media only screen and (min-width: 992px) {
+   h4,
+   p {
+      text-align: center;
+      padding-left: 3em;
+      padding-right: 3em;
+   }
+   p {
+      text-align: initial;
+   }
+}
+img {
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+}
+@media only screen and (max-width: 600px) {
+   h4,
+   p {
+      padding-left: 1em;
+      padding-right: 3em;
+   }
+}

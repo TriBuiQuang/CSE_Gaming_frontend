@@ -1,0 +1,38 @@
+$base-color: #0a1626;
+$base-card-color: #0d2334;
+$wrap-text-color: #f2f3f4;
+$card-text-color: #717781;
+$form-text-color: #a3a6a8;
+
+.main-panel {
+   background: $base-color;
+   color: $wrap-text-color;
+   .card .card-body {
+      background: $base-card-color;
+      color: $card-text-color;
+      .table {
+         color: $card-text-color;
+      }
+      .form-control[disabled],
+      .form-control[readonly],
+      fieldset[disabled] .form-control,
+      .form-control {
+         background: $base-color;
+         color: $form-text-color;
+      }
+   }
+   .card .card-footer {
+      background: $base-card-color;
+      color: $card-text-color;
+   }
+}
+
+.container-fluid {
+   z-index: 2;
+   position: relative;
+}
+
+// auth/csegaming-turial
+.fullpage-scroll {
+   color: $wrap-text-color;
+}
